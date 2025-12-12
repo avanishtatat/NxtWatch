@@ -77,7 +77,7 @@ class LoginForm extends Component {
             ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
             : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
           return (
-            <LoginContainer isDark={isDark}>
+            <LoginContainer>
               <FormCard isDark={isDark}>
                 <Image alt="website logo" src={logoUrl} />
                 <Form onSubmit={this.onSubmitForm}>

@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 
 export const LoginContainer = styled.div`
   min-height: 100vh;
-  background-color: ${props => (props.isDark ? '#181818' : '#f8fafc')};
+  background-color: ${props => props.theme.loginBgColor};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,7 @@ export const LoginContainer = styled.div`
 
 export const FormCard = styled.div`
   width: 90%;
-  background-color: ${props => (props.isDark ? '#0f0f0f' : '#ffffff')};
+  background-color: ${props => props.theme.bgColor};
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -45,14 +45,14 @@ export const InputContainer = styled.div`
 `
 
 export const Label = styled.label`
-  color: ${props => (props.isDark ? '#ffffff' : '#475569')};
+  color: ${props => props.theme.labelColor};
   font-family: 'Roboto';
   font-size: 15px;
   font-weight: 500;
 `
 export const Input = styled.input`
-  border: 1px solid #ebebeb;
-  color: ${props => (props.isDark ? '#f8fafc' : '#475569')};
+  border: 1px solid ${props => props.theme.inputBorder};
+  color: ${props => props.theme.inputColor};
   background-color: transparent;
   height: 45px;
   width: 100%;
@@ -78,7 +78,7 @@ export const Checkbox = styled.input`
 `
 
 export const CheckboxLabel = styled(Label)`
-  color: ${props => (props.isDark ? '#ffffff' : '#000000')};
+  color: ${props => props.theme.checkboxLabel};
   font-size: 18px;
   font-weight: 400;
 `
