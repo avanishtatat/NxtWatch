@@ -10,7 +10,7 @@ import './App.css'
 
 // Replace your code here
 class App extends Component {
-  state = {isDark: true}
+  state = {isDark: false}
 
   onToggleTheme = () => {
     this.setState(prevState => ({isDark: !prevState.isDark}))
