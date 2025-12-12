@@ -4,6 +4,8 @@ import {ThemeProvider} from 'styled-components'
 import LoginForm from './components/LoginForm'
 import ThemeContext from './context/ThemeContext'
 import {LightTheme, DarkTheme} from './theme'
+import ProtectedRoute from './components/ProtectedRoute'
+import Home from './components/Home'
 import './App.css'
 
 // Replace your code here
@@ -23,7 +25,8 @@ class App extends Component {
       >
         <ThemeProvider theme={activeTheme}>
           <Switch>
-            <Route path="/login" component={LoginForm} />
+            <Route exact path="/login" component={LoginForm} />
+            <ProtectedRoute exact path="/" component={Home} />
           </Switch>
         </ThemeProvider>
       </ThemeContext.Provider>
