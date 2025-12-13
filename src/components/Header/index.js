@@ -5,7 +5,6 @@ import Popup from 'reactjs-popup'
 import {FaMoon} from 'react-icons/fa'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {FiLogOut} from 'react-icons/fi'
-import Sidebar from '../Sidebar'
 import ThemeContext from '../../context/ThemeContext'
 import {
   Navbar,
@@ -20,8 +19,6 @@ import {
   ButtonContainer,
   CancelButton,
   ConfirmButton,
-  MenuContainer,
-  MenuItem,
 } from './styledComponents'
 
 const Header = props => {

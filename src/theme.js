@@ -8,6 +8,9 @@ export const LightTheme = {
   color: '#000000',
   logoutButton: '#3b82f6',
   title: '#1e293b',
+  menuColor: '#475569',
+  menuBgColor: '#e2e8f0',
+  searchButtonBgColor: '#f4f4f4',
 }
 
 export const DarkTheme = {
@@ -20,4 +23,7 @@ export const DarkTheme = {
   color: '#ffffff',
   logoutButton: '#ffffff',
   title: '#ffffff',
+  menuColor: '#f9f9f9',
+  menuBgColor: '#231f20',
+  searchButtonBgColor: '#383838',
 }
