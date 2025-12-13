@@ -1,6 +1,7 @@
 export const LightTheme = {
   loginBgColor: '#f9f9f9',
   bgColor: '#f9f9f9',
+  navBgColor: '#ffffff',
   labelColor: '#475569',
   inputBorder: '#94a3b8',
   inputColor: '#475569',
@@ -11,11 +12,14 @@ export const LightTheme = {
   menuColor: '#475569',
   menuBgColor: '#e2e8f0',
   searchButtonBgColor: '#f4f4f4',
+  bannerBg: '#ebebeb',
+  bannerImg: '#cbd5e1',
 }
 
 export const DarkTheme = {
   loginBgColor: '#181818',
   bgColor: '#0f0f0f',
+  navBgColor: '#212121',
   labelColor: '#ffffff',
   inputBorder: '#1e293b',
   inputColor: '#f8fafc',
@@ -24,6 +28,8 @@ export const DarkTheme = {
   logoutButton: '#ffffff',
   title: '#ffffff',
   menuColor: '#f9f9f9',
-  menuBgColor: '#231f20',
+  menuBgColor: '#313131',
   searchButtonBgColor: '#383838',
+  bannerBg: '#181818',
+  bannerImg: '#000000',
 }

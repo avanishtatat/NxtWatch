@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 
 export const Navbar = styled.nav`
   padding: 20px;
-  background-color: ${props => props.theme.bgColor};
+  background-color: ${props => props.theme.navBgColor};
   display: flex;
   align-items: center;
 `

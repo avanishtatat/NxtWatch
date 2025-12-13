@@ -33,7 +33,7 @@ const Sidebar = props => {
           </LinkItem>
         </MenuItem>
         <MenuItem to="/trending">
-          <LinkItem>
+          <LinkItem isActive={activePath === '/trending'}>
             <HiFire
               size={25}
               color={activePath === '/trending' ? '#ff0000' : '#616e7c'}
@@ -42,7 +42,7 @@ const Sidebar = props => {
           </LinkItem>
         </MenuItem>
         <MenuItem to="/gaming">
-          <LinkItem>
+          <LinkItem isActive={activePath === '/gaming'}>
             <SiYoutubegaming
               size={25}
               color={activePath === '/gaming' ? '#ff0000' : '#616e7c'}
@@ -51,7 +51,7 @@ const Sidebar = props => {
           </LinkItem>
         </MenuItem>
         <MenuItem to="/saved-videos">
-          <LinkItem>
+          <LinkItem isActive={activePath === '/saved-videos'}>
             <MdPlaylistAdd
               size={25}
               color={activePath === '/saved-videos' ? '#ff0000' : '#616e7c'}

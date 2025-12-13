@@ -18,7 +18,7 @@ export const HomeContent = styled.div`
 
 export const VideoContent = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 78vh;
   order: -1;
   overflow-y: auto;
 

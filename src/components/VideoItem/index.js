@@ -16,16 +16,16 @@ import {
 } from './styledComponents'
 
 const VideoItem = props => {
-  const {video} = props
+  const {video, varient} = props
   const {id, channel, title, thumbnailUrl, viewCount, publishedAt} = video
 
   return (
     <Video to={`/videos/${id}`}>
-      <VideoList>
-        <Image src={thumbnailUrl} />
+      <VideoList varient={varient}>
+        <Image src={thumbnailUrl} varient={varient} />
         <VideoContent>
-          <Profile src={channel.profileImageUrl} />
-          <Content>
+          <Profile src={channel.profileImageUrl} varient={varient} />
+          <Content varient={varient}>
             <Title>{title}</Title>
             <Channel>
               <Name>{channel.name}</Name>

@@ -9,8 +9,12 @@ export const VideoList = styled.li`
   margin-bottom: 20px;
   width: 100%;
   @media screen and (min-width: 768px) {
-    width: 320px;
-    margin-right: 20px;
+    width: ${props => (props.varient === 'trending' ? '90%' : '320px')};
+    display: flex;
+    flex-direction: ${props =>
+      props.varient === 'trending' ? 'row' : 'column'};
+    margin: ${props =>
+      props.varient === 'trending' ? '0 auto 40px' : '0 20px 20px 0'};
   }
 `
 
@@ -20,6 +24,7 @@ export const Image = styled.img`
   margin-bottom: 10px;
   @media screen and (min-width: 768px) {
     height: 240px;
+    width: ${props => (props.varient === 'trending' ? '40%' : '100%')};
   }
 `
 
@@ -34,12 +39,18 @@ export const Profile = styled.img`
   margin-right: 15px;
   width: 40px;
   height: 40px;
+  @media screen and (min-width: 768px) {
+    display: ${props => (props.varient === 'trending' ? 'none' : 'inline')};
+  }
 `
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   line-height: 1;
+  @media screen and (min-width: 768px) {
+    line-height: ${props => (props.varient === 'trending' ? '1.5' : '1')};
+  }
 `
 
 export const Title = styled.h1`

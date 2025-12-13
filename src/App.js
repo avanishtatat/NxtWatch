@@ -6,6 +6,7 @@ import ThemeContext from './context/ThemeContext'
 import {LightTheme, DarkTheme} from './theme'
 import ProtectedRoute from './components/ProtectedRoute'
 import Home from './components/Home'
+import Trending from './components/Trending'
 import './App.css'
 
 // Replace your code here
@@ -27,6 +28,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/login" component={LoginForm} />
             <ProtectedRoute exact path="/" component={Home} />
+            <ProtectedRoute exact path="/trending" component={Trending} />
           </Switch>
         </ThemeProvider>
       </ThemeContext.Provider>

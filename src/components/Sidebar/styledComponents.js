@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 export const SidebarContainer = styled.div`
   width: 100%;
-  background-color: ${props => props.theme.bgColor};
+  background-color: ${props => props.theme.navBgColor};
   height: 40px;
   @media screen and (min-width: 768px) {
     width: 25%;
