@@ -8,6 +8,8 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Home from './components/Home'
 import Trending from './components/Trending'
 import Gaming from './components/Gaming'
+import VideoItemDetails from './components/VideoItemDetails'
+import VideoStatusProvider from './context/VideoStatusProvider'
 import './App.css'
 
 // Replace your code here
@@ -23,16 +25,26 @@ class App extends Component {
     const activeTheme = isDark ? DarkTheme : LightTheme
     return (
       <ThemeContext.Provider
-        value={{isDark, onToggleTheme: this.onToggleTheme}}
+        value={{
+          isDark,
+          onToggleTheme: this.onToggleTheme,
+        }}
       >
-        <ThemeProvider theme={activeTheme}>
-          <Switch>
-            <Route exact path="/login" component={LoginForm} />
-            <ProtectedRoute exact path="/" component={Home} />
-            <ProtectedRoute exact path="/trending" component={Trending} />
-            <ProtectedRoute exact path="/gaming" component={Gaming} />
-          </Switch>
-        </ThemeProvider>
+        <VideoStatusProvider>
+          <ThemeProvider theme={activeTheme}>
+            <Switch>
+              <Route exact path="/login" component={LoginForm} />
+              <ProtectedRoute exact path="/" component={Home} />
+              <ProtectedRoute exact path="/trending" component={Trending} />
+              <ProtectedRoute exact path="/gaming" component={Gaming} />
+              <ProtectedRoute
+                exact
+                path="/videos/:id"
+                component={VideoItemDetails}
+              />
+            </Switch>
+          </ThemeProvider>
+        </VideoStatusProvider>
       </ThemeContext.Provider>
     )
   }
