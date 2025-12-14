@@ -100,7 +100,7 @@ class Gaming extends Component {
 
   render() {
     return (
-      <GamingContainer>
+      <GamingContainer data-testid="gaming">
         <Header />
         <GamingBody>
           <Sidebar />

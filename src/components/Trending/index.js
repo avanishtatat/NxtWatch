@@ -104,7 +104,7 @@ class Trending extends Component {
 
   render() {
     return (
-      <TrendingContainer>
+      <TrendingContainer data-testid="trending">
         <Header />
         <TrendingBody>
           <Sidebar />

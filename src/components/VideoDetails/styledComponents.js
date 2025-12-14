@@ -83,7 +83,7 @@ export const Button = styled.button`
 export const ButtonText = styled.p`
   font-family: 'Roboto';
   font-size: 16px;
-  color: ${props => (props.isActive ? '#3b82f6' : '#616e7c')};
+  color: ${props => (props.isActive ? '#2563eb' : '#64748b')};
   margin-right: 15px;
   font-weight: 500;
 `

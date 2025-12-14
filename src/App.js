@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import {ThemeProvider} from 'styled-components'
 import LoginForm from './components/LoginForm'
 import ThemeContext from './context/ThemeContext'
@@ -9,7 +9,10 @@ import Home from './components/Home'
 import Trending from './components/Trending'
 import Gaming from './components/Gaming'
 import VideoItemDetails from './components/VideoItemDetails'
+import SavedVideos from './components/SavedVideos'
+import NotFound from './components/NotFound'
 import VideoStatusProvider from './context/VideoStatusProvider'
+
 import './App.css'
 
 // Replace your code here
@@ -42,6 +45,13 @@ class App extends Component {
                 path="/videos/:id"
                 component={VideoItemDetails}
               />
+              <ProtectedRoute
+                exact
+                path="/saved-videos"
+                component={SavedVideos}
+              />
+              <Route exact path="/not-found" component={NotFound} />
+              <Redirect to="/not-found" />
             </Switch>
           </ThemeProvider>
         </VideoStatusProvider>

@@ -99,7 +99,7 @@ const Sidebar = props => {
             color={activePath === '/gaming' ? '#ff0000' : '#616e7c'}
           />
         </MenuItem>
-        <MenuItem to="saved-videos">
+        <MenuItem to="/saved-videos">
           <MdPlaylistAdd
             size={30}
             color={activePath === '/saved-videos' ? '#ff0000' : '#616e7c'}

@@ -22,9 +22,13 @@ const VideoItem = props => {
   return (
     <Video to={`/videos/${id}`}>
       <VideoList varient={varient}>
-        <Image src={thumbnailUrl} varient={varient} />
+        <Image src={thumbnailUrl} varient={varient} alt="video thumbnail" />
         <VideoContent>
-          <Profile src={channel.profileImageUrl} varient={varient} />
+          <Profile
+            src={channel.profileImageUrl}
+            varient={varient}
+            alt="channel logo"
+          />
           <Content varient={varient}>
             <Title>{title}</Title>
             <Channel>

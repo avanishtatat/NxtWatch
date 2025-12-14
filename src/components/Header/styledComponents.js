@@ -70,7 +70,7 @@ export const Profile = styled.img`
 `
 
 export const Modal = styled.div`
-  background-color: ${props => props.theme.bgColor};
+  background-color: ${props => props.theme.modalBgColor};
   height: 200px;
   width: 380px;
   display: flex;

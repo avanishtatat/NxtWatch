@@ -1,5 +1,6 @@
 export const LightTheme = {
-  loginBgColor: '#f9f9f9',
+  loginBgColor: '#ffffff',
+  modalBgColor: '#ffffff',
   bgColor: '#f9f9f9',
   navBgColor: '#ffffff',
   labelColor: '#475569',
@@ -18,6 +19,7 @@ export const LightTheme = {
 
 export const DarkTheme = {
   loginBgColor: '#181818',
+  modalBgColor: '#212121',
   bgColor: '#0f0f0f',
   navBgColor: '#212121',
   labelColor: '#ffffff',

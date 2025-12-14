@@ -74,20 +74,20 @@ const VideoDetails = props => (
             </ViewContainer>
             <ButtonContainer>
               <Button type="button" onClick={onClickLike}>
-                <BiLike size={25} color={isLiked ? '#3b82f6' : '#616e7c'} />
+                <BiLike size={25} color={isLiked ? '#2563eb' : '#64748b'} />
                 <ButtonText isActive={isLiked}>Like</ButtonText>
               </Button>
               <Button type="button" onClick={onClickDislike}>
                 <BiDislike
                   size={25}
-                  color={isDisliked ? '#3b82f6' : '#616e7c'}
+                  color={isDisliked ? '#2563eb' : '#64748b'}
                 />
                 <ButtonText isActive={isDisliked}>Dislike</ButtonText>
               </Button>
               <Button type="button" onClick={onClickSave}>
                 <MdPlaylistAdd
                   size={25}
-                  color={isSaved ? '#3b82f6' : '#616e7c'}
+                  color={isSaved ? '#2563eb' : '#64748b'}
                 />
                 <ButtonText isActive={isSaved}>
                   {isSaved ? 'Saved' : 'Save'}

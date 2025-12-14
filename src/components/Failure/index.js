@@ -20,7 +20,7 @@ const Failure = props => (
         : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png'
       return (
         <Container>
-          <Image src={failureImageUrl} />
+          <Image src={failureImageUrl} alt="failure view" />
           <Heading>Oops! Something Went Wrong</Heading>
           <Description>
             We are having some trouble to complete your request. Please try

@@ -14,7 +14,7 @@ const GamingVideoItem = props => {
   return (
     <VideoLink to={`/videos/${id}`}>
       <VideoCard>
-        <Thumbnail src={thumbnailUrl} />
+        <Thumbnail src={thumbnailUrl} alt="video thumbnail" />
         <TextContainer>
           <Title>{title}</Title>
           <View>{viewCount} Watching Worldwide</View>

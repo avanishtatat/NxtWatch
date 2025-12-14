@@ -16,6 +16,13 @@ export const HomeContent = styled.div`
   }
 `
 
+export const Button = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+`
+
 export const VideoContent = styled.div`
   width: 100%;
   height: 78vh;

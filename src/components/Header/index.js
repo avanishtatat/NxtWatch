@@ -58,7 +58,7 @@ const Header = props => {
               <Image alt="website logo" src={logoUrl} />
             </Link>
             <NavItems>
-              <ThemeButton onClick={onClickTheme}>
+              <ThemeButton onClick={onClickTheme} data-testid="theme">
                 {isDark ? (
                   <BsFillBrightnessHighFill size={30} />
                 ) : (

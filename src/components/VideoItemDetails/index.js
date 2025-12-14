@@ -103,7 +103,7 @@ class VideoItemDetails extends Component {
 
   render() {
     return (
-      <VideoItemDetail>
+      <VideoItemDetail data-testid="videoItemDetails">
         <Header />
         <VideoDetailsBody>
           <Sidebar />

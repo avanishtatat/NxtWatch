@@ -25,6 +25,7 @@ import {
   Heading,
   Description,
   RetryButton,
+  Button,
 } from './styledComponents'
 
 const apiStatusConstants = {
@@ -144,23 +145,25 @@ class Home extends Component {
     const {search} = this.state
 
     return (
-      <HomeContainer>
+      <HomeContainer data-testid="home">
         <Header />
         <HomeContent>
           <Sidebar />
           <VideoContent>
-            <Banner>
+            <Banner data-testid="banner">
               <BannerContent>
                 <BannerImg
                   src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                  alt="website logo"
+                  alt="nxt watch logo"
                 />
                 <BannerTitle>
                   Buy Nxt Watch Premium prepaid plans with UPI{' '}
                 </BannerTitle>
                 <GetButton>GET IT NOW</GetButton>
               </BannerContent>
-              <IoIosClose size={35} />
+              <Button type="button" data-testid="close">
+                <IoIosClose size={35} />
+              </Button>
             </Banner>
             <InputContainer>
               <Input
@@ -169,7 +172,11 @@ class Home extends Component {
                 value={search}
                 onChange={this.onChangeSearch}
               />
-              <SearchButton type="button" onClick={this.onClickSearchButton}>
+              <SearchButton
+                type="button"
+                onClick={this.onClickSearchButton}
+                data-testid="searchButton"
+              >
                 <IoMdSearch size={25} />
               </SearchButton>
             </InputContainer>

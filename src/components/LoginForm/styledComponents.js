@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 
 export const LoginContainer = styled.div`
   min-height: 100vh;
-  background-color: ${props => props.theme.loginBgColor};
+  background-color: ${props => props.theme.bgColor};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,7 @@ export const LoginContainer = styled.div`
 
 export const FormCard = styled.div`
   width: 90%;
-  background-color: ${props => props.theme.bgColor};
+  background-color: ${props => props.theme.loginBgColor};
   border-radius: 10px;
   display: flex;
   flex-direction: column;
