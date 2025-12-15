@@ -19,7 +19,7 @@ const SavedVideoItem = props => {
   const {
     id,
     channel,
-    description,
+
     publishedAt,
     thumbnailUrl,
     title,

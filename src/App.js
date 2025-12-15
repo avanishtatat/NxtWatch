@@ -50,7 +50,7 @@ class App extends Component {
                 path="/saved-videos"
                 component={SavedVideos}
               />
-              <Route exact path="/not-found" component={NotFound} />
+              <ProtectedRoute exact path="/not-found" component={NotFound} />
               <Redirect to="/not-found" />
             </Switch>
           </ThemeProvider>

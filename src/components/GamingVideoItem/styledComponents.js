@@ -31,7 +31,7 @@ export const TextContainer = styled.div`
   gap: 0px;
 `
 
-export const Title = styled.h1`
+export const Title = styled.p`
   width: 100%;
   font-family: 'Roboto';
   font-size: 18px;

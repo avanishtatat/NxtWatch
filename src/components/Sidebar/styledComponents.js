@@ -54,9 +54,10 @@ export const ContactContainer = styled.div`
   padding-left: 30px;
 `
 
-export const Heading = styled.div`
+export const Heading = styled.p`
   color: ${props => props.theme.title};
   font-family: 'Roboto';
+  font-weight: 700;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 18px;

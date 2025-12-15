@@ -83,7 +83,7 @@ class VideoItemDetails extends Component {
   renderFailureView = () => <Failure retryApi={this.onClickRetry} />
 
   renderVideoDetails = () => {
-    const {videoDetails, isSaved, isDisliked, isLiked} = this.state
+    const {videoDetails} = this.state
     return <VideoDetails videoDetails={videoDetails} />
   }
 

@@ -70,7 +70,7 @@ export const VideoDescription = styled.div`
     margin-left: 10px;
   }
 `
-export const Title = styled.h1`
+export const Title = styled.p`
   margin-top: 0%;
   padding-top: 2px;
   color: ${props => props.theme.title};

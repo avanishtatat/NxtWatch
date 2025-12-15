@@ -45,7 +45,7 @@ const SavedVideos = () => (
           />
           <Heading>No saved videos found</Heading>
           <Description>
-            You can saved your videos while watching them
+            You can save your videos while watching them
           </Description>
         </NoVideos>
       )

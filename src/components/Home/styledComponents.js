@@ -4,7 +4,7 @@ export const HomeContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: ${props => props.theme.bgColor};
+  background-color: ${props => props.theme.homeBgColor};
 `
 
 export const HomeContent = styled.div`
@@ -59,7 +59,7 @@ export const BannerImg = styled.img`
     height: 60px;
   }
 `
-export const BannerTitle = styled.h1`
+export const BannerTitle = styled.p`
   color: #1e293b;
   font-family: 'Roboto';
   font-size: 24px;

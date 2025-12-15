@@ -3,8 +3,8 @@ import styled from 'styled-components/macro'
 export const ReactPlayerContainer = styled.div`
   margin-top: 20px;
   width: 100%;
-  aspect-ratio: 16/9;
   position: relative;
+  padding-top: 56.25%;
 
   .react-player {
     position: absolute;
@@ -22,7 +22,7 @@ export const ReactPlayerContainer = styled.div`
   }
 `
 
-export const Title = styled.h1`
+export const Title = styled.p`
   font-family: 'Roboto';
   color: ${props => props.theme.title};
   font-weight: 500;
@@ -69,7 +69,14 @@ export const ButtonContainer = styled.div`
   align-items: center;
 `
 
+export const LikeDislikeContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`
+
 export const Button = styled.button`
+  color: ${props => (props.isActive ? '#2563eb' : '#64748b')};
   margin-right: 10px;
   background-color: transparent;
   border: none;
@@ -78,6 +85,10 @@ export const Button = styled.button`
   align-items: center;
   gap: 10px;
   padding-left: 0%;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
 `
 
 export const ButtonText = styled.p`

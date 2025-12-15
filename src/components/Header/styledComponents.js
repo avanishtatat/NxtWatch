@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+import {Link} from 'react-router-dom'
 
 export const Navbar = styled.nav`
   padding: 20px;
@@ -116,4 +117,57 @@ export const MenuContainer = styled.ul`
 
 export const MenuItem = styled.li`
   font-family: 'Roboto';
+`
+
+export const MenuModal = styled.div`
+  position: fixed;
+  min-height: 100vh;
+  right: 0;
+  width: 50%;
+  background-color: ${props => props.theme.bgColor};
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto !important;
+  z-index: 1000;
+`
+
+export const CloseButton = styled.button`
+  cursor: pointer;
+  color: ${props => props.theme.title};
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-bottom: 40px;
+`
+
+export const LinkContainer = styled.ul`
+  list-style-type: none;
+  padding-left: 0%;
+  align-self: center;
+`
+
+export const MenuLink = styled(Link)`
+  text-decoration: none;
+`
+
+export const LinkItem = styled.li`
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 2px;
+  font-weight: ${props => (props.isActive ? 'bold' : 'normal')};
+  background-color: ${props =>
+    props.isActive ? props.theme.menuBgColor : 'transparent'};
+  border-radius: ${props => (props.isActive ? '8px' : '0px')};
+  padding: ${props => (props.isActive ? '35px' : '30px')};
+`
+
+export const LinkText = styled.p`
+  font-family: 'Roboto';
+  color: ${props => props.theme.menuColor};
 `

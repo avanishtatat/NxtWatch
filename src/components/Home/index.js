@@ -40,6 +40,7 @@ class Home extends Component {
     search: '',
     apiStatus: apiStatusConstants.initial,
     videosList: [],
+    bannerVisible: true,
   }
 
   componentDidMount() {
@@ -108,7 +109,7 @@ class Home extends Component {
         alt="no videos"
       />
       <Heading>No search results found</Heading>
-      <Description>Try different keywords or remove search filter</Description>
+      <Description>Try different key words or remove search filter</Description>
       <RetryButton onClick={this.onClickRetry}>Retry</RetryButton>
     </NoVideos>
   )
@@ -141,8 +142,12 @@ class Home extends Component {
     }
   }
 
+  onClickBannerClose = () => {
+    this.setState(prevState => ({bannerVisible: !prevState.bannerVisible}))
+  }
+
   render() {
-    const {search} = this.state
+    const {search, bannerVisible} = this.state
 
     return (
       <HomeContainer data-testid="home">
@@ -150,21 +155,27 @@ class Home extends Component {
         <HomeContent>
           <Sidebar />
           <VideoContent>
-            <Banner data-testid="banner">
-              <BannerContent>
-                <BannerImg
-                  src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                  alt="nxt watch logo"
-                />
-                <BannerTitle>
-                  Buy Nxt Watch Premium prepaid plans with UPI{' '}
-                </BannerTitle>
-                <GetButton>GET IT NOW</GetButton>
-              </BannerContent>
-              <Button type="button" data-testid="close">
-                <IoIosClose size={35} />
-              </Button>
-            </Banner>
+            {bannerVisible && (
+              <Banner data-testid="banner">
+                <BannerContent>
+                  <BannerImg
+                    src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                    alt="nxt watch logo"
+                  />
+                  <BannerTitle>
+                    Buy Nxt Watch Premium prepaid plans with UPI{' '}
+                  </BannerTitle>
+                  <GetButton>GET IT NOW</GetButton>
+                </BannerContent>
+                <Button
+                  type="button"
+                  data-testid="close"
+                  onClick={this.onClickBannerClose}
+                >
+                  <IoIosClose size={35} />
+                </Button>
+              </Banner>
+            )}
             <InputContainer>
               <Input
                 type="search"

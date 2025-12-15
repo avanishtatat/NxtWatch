@@ -11,7 +11,7 @@ import {
   Description,
 } from './styledComponents'
 
-const NotFound = props => (
+const NotFound = () => (
   <ThemeContext.Consumer>
     {value => {
       const {isDark} = value
@@ -29,7 +29,7 @@ const NotFound = props => (
                 <Image src={notFoundImageUrl} alt="not found" />
                 <Heading>Page Not Found</Heading>
                 <Description>
-                  We are sorry the page you requested could not be found
+                  We are sorry, the page you requested could not be found.
                 </Description>
               </Container>
             </NotFoundContent>

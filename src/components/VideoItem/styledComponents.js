@@ -53,7 +53,7 @@ export const Content = styled.div`
   }
 `
 
-export const Title = styled.h1`
+export const Title = styled.p`
   font-family: 'Roboto';
   font-size: 20px;
   color: ${props => props.theme.color};

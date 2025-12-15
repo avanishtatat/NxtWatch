@@ -73,18 +73,21 @@ const VideoDetails = props => (
               <Text>{formatDistanceToNow(new Date(publishedAt))}</Text>
             </ViewContainer>
             <ButtonContainer>
-              <Button type="button" onClick={onClickLike}>
-                <BiLike size={25} color={isLiked ? '#2563eb' : '#64748b'} />
-                <ButtonText isActive={isLiked}>Like</ButtonText>
+              <Button type="button" onClick={onClickLike} isActive={isLiked}>
+                <BiLike size={25} />
+                Like
               </Button>
-              <Button type="button" onClick={onClickDislike}>
-                <BiDislike
-                  size={25}
-                  color={isDisliked ? '#2563eb' : '#64748b'}
-                />
-                <ButtonText isActive={isDisliked}>Dislike</ButtonText>
+
+              <Button
+                type="button"
+                onClick={onClickDislike}
+                isActive={isDisliked}
+              >
+                <BiDislike size={25} />
+                Dislike
               </Button>
-              <Button type="button" onClick={onClickSave}>
+
+              <Button type="button" onClick={onClickSave} isActive={isSaved}>
                 <MdPlaylistAdd
                   size={25}
                   color={isSaved ? '#2563eb' : '#64748b'}
@@ -97,7 +100,7 @@ const VideoDetails = props => (
           </Container>
           <HrLine />
           <ChannelDetailContainer>
-            <Profile src={channel.profileImageUrl} />
+            <Profile src={channel.profileImageUrl} alt="channel logo" />
             <ChannelDetailText>
               <ChannelName>{channel.name}</ChannelName>
               <ChannelSub>{channel.subscriberCount} subscribers</ChannelSub>

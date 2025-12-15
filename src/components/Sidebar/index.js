@@ -73,11 +73,11 @@ const Sidebar = props => {
           />
           <Image
             src="https://assets.ccbp.in/frontend/react-js/nxt-watch-linked-in-logo-img.png"
-            alt="linkedin logo"
+            alt="linked in logo"
           />
         </Container>
         <Description>
-          Enjoy! Now to see Your channels and recommendations
+          Enjoy! Now to see your channels and recommendations!
         </Description>
       </ContactContainer>
       <MobileLinkContainer>
